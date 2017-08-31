@@ -11,8 +11,14 @@ Rails.application.routes.draw do
   end
 
   resources :orders, only: [:create, :show]
-  
-  #Added to create user login. 
+
+  # To login.
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
+
+
+  #Added to create user.
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
 
