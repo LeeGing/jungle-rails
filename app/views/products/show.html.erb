@@ -5,13 +5,28 @@
   </header>
 
   <article class="product-detail">
-
     <div class="row">
-
       <div class="col-sm-4">
         <%= image_tag @product.image.url, class: 'main-img' %>
       </div>
-
+        <% @product.reviews.each do |review| %>
+        <div class="col-sm-8">
+          <dl class="dl-horizontal">
+            <dt>Rating:</dt>
+            <dd><%= review.rating %></dd>
+          </dl>
+        </div>
+        <div class="col-sm-8">
+          <dl class="dl-horizontal">
+            <dt class="descriptiontext">Description</dt>
+           <dd><%= review.description %></dd>
+          </dl>
+        </div>
+        <% end %>
+      </div>
+      <div>
+       <%= render 'forms' %>
+      </div>
       <div class="col-sm-8">
         <dl class="dl-horizontal">
           <dt>Name</dt>

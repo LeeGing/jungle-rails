@@ -2,7 +2,9 @@ Rails.application.routes.draw do
 
   root to: 'products#index'
 
-  resources :products, only: [:index, :show]
+  resources :products, only: [:index, :show] do
+    resources :reviews, only: [:create]
+  end
   resources :categories, only: [:show]
 
   resource :cart, only: [:show] do
@@ -21,6 +23,9 @@ Rails.application.routes.draw do
   #Added to create user.
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
+
+  post '/products/:id/review' => 'product#create'
+
 
   namespace :admin do
     root to: 'dashboard#show'
