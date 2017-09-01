@@ -31,7 +31,7 @@ class OrdersController < ApplicationController
       source:      params[:stripeToken],
       amount:      cart_total, # in cents
       description: "Khurram Virani's Jungle Order",
-      currency:    'cad'
+      currency:    'Cad'
     )
   end
 
@@ -53,6 +53,8 @@ class OrdersController < ApplicationController
       end
     end
     order.save!
+    @order = order
+    UserMailer.order_confirmation(order).deliver
     order
   end
 
