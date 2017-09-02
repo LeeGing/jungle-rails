@@ -5,11 +5,25 @@
   </header>
 
   <article class="product-detail">
+
+
+          <% if flash[:notice] %>
+            <div class="alert alert-info" role="alert"><%= flash[:notice]%></div>
+          <% end %>
+
+
+
+
+
     <div class="row">
       <div class="col-sm-4">
         <%= image_tag @product.image.url, class: 'main-img' %>
       </div>
         <% @product.reviews.each do |review| %>
+        <div class="col-sm-8">
+          <dl class="dl-horizontal">
+            <dt class="descriptiontext">Name</dt>
+           <dd><%= review.user.name %></dd>
         <div class="col-sm-8">
           <dl class="dl-horizontal">
             <dt>Rating:</dt>
@@ -25,7 +39,7 @@
         <% end %>
       </div>
       <div>
-       <%= render 'forms' %>
+       <%= render 'reviews/form' %>
       </div>
       <div class="col-sm-8">
         <dl class="dl-horizontal">
