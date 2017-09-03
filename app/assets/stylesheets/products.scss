@@ -87,15 +87,21 @@ main section.products-show {
 
 .dl-horizontal {
   border-style: solid;
-  margin-top: 500px;
+  margin-top: 20px;
   border-color: #337ab7;
 }
 
 .main-img {
-  background-image:url("mymessage.gif");
-    left:100px; /* play around with this */
-    position:absolute;
-    top:90px; /* and play around with this */
+  margin-top: 50px;
+}
+
+.mainimage {
+
+    width:300px;
+    height: 400px;
+    margin: 50px;
+    display: block;
+    margin: 0 auto;
 
 }
 
@@ -116,6 +122,10 @@ main section.products-show {
 .reviewbox {
   border-style: solid;
   padding-left: 20px;
+  width: 500px;
+  margin: auto;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 .reviewtext {
