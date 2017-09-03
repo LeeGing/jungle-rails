@@ -1,24 +1,21 @@
-
-
 <!DOCTYPE html>
 <html>
 <body>
-	<h1> Greetings Customer
-
+	<h1> Greetings Customer,
 	Your Order: 
 	</h1>
 	<div> 
 		<% totalOrderPrice = 0 %>
 		<% @order.line_items.each do |item| %>
-			<dt>Total Price </dt> 
+			<div>Total Price </div> 
 			<%= item.total_price_cents%>
-			<dt>Product Name</dt>  
+			<div>Product Name</div>  
 			<%= item.product.name%>
-			<dt>Product Description</dt> 
+			<div>Product Description</div> 
 			<%= item.product.description%>
-			<dt>Product Quantity </dt> 
+			<div>Product Quantity </div> 
 			<%= item.quantity%>
-			<dt>Product Description</dt>  
+			<div>Product Description</div>  
 			<%= item.product.description%>
 			<%= image_tag item.product.image.url, class: 'order_img' %>
 			<% totalOrderPrice += item.total_price_cents %>

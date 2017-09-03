@@ -85,4 +85,63 @@ main section.products-show {
   }
 }
 
+.dl-horizontal {
+  border-style: solid;
+  margin-top: 500px;
+  border-color: #337ab7;
+}
 
+.main-img {
+  background-image:url("mymessage.gif");
+    left:100px; /* play around with this */
+    position:absolute;
+    top:90px; /* and play around with this */
+
+}
+
+.loginsignup {
+  padding-top: 15px;
+  float:right;
+}
+
+.productdetail {
+  padding-left: 80px;
+  padding-bottom: 20px;
+}
+
+.priceline {
+  padding-bottom:20px;
+}
+
+.reviewbox {
+  border-style: solid;
+  padding-left: 20px;
+}
+
+.reviewtext {
+  padding-left: 10px;
+}
+
+.nametext {
+  padding-bottom: 20px;
+}
+
+.reviewform {
+    text-align: center;
+  margin-top: 50px;
+}
+
+textarea {
+  width: 980px;
+  height: 150px;
+}
+
+.reviewlabel {
+  padding-bottom: 20px;
+  padding-top: 10px;
+  font-weight: bold;
+}
+
+.submitbutton {
+  padding-bottom: 50px;
+}
