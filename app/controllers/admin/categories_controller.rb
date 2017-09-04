@@ -19,12 +19,6 @@ class Admin::CategoriesController < ApplicationController
     end
   end
 
-  # def destroy
-  #   @category = Product.find params[:id]
-  #   @category.destroy
-  #   redirect_to [:admin, :categories], notice: 'Category deleted!'
-  # end
-
   private
 
   def category_params

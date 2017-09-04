@@ -1,11 +1,10 @@
 <div class="reviewform">
-	<%= form_for ([@product, @review]) do |f| %>
-	<div class="reviewlabel">Description:</div>
-	<%= f.text_area :description, placeholder: "Please tell us what you think..."%><br/>
-	<div class="reviewlabel"> Rating: <%= f.select :rating, 1..10 %></div>
-
-	<div class="submitbutton">
-		<%= f.submit "Submit" %>
-		<% end %>
-	</div>
+  <%= form_for ([@product, @review]) do |f| %>
+  <div class="reviewlabel">Description:</div>
+  <%= f.text_area :description, placeholder: "Please tell us what you think..."%><br/>
+  <div class="reviewlabel"> Rating: <%= f.select :rating, 1..10 %></div>
+  <div class="submitbutton">
+    <%= f.submit "Submit" %>
+    <% end %>
+  </div>
 </div>

@@ -7,7 +7,7 @@
 	<div> 
 		<% totalOrderPrice = 0 %>
 		<% @order.line_items.each do |item| %>
-			<div>Total Price </div> 
+			<div>Price </div> 
 			<%= item.total_price_cents%>
 			<div>Product Name</div>  
 			<%= item.product.name%>

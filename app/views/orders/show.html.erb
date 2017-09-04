@@ -1,5 +1,4 @@
 <section class="orders-show">
-
   <header class="page-header">
     <h1>Order #<%= @order.id %></h1>
   </header>
@@ -8,36 +7,31 @@
     <h4>Thank you for your order!</h4>
     <h5><%= @order.email %> </h5>
   </div>
+
   <div> 
     <% totalOrderPrice = 0 %>
     <% @order.line_items.each do |item| %>
-    <div class="orderbox">
-          <div class="orderimg">
-      <%= image_tag item.product.image.url, class: 'order_img' %>
-      </div>
 
-	    <dt>Price: </dt> 
-	    $ <%= item.total_price_cents * 0.01%>
-	    <dt>Product Name:</dt>  
-	    <%= item.product.name%>
-	    <dt>Product Description:</dt> 
-	    <%= item.product.description%>
-	    <dt>Product Quantity: </dt> 
-	    <%= item.quantity%>
-	    <dt>Product Description:</dt>  
-	    <%= item.product.description%>
+    <div class="orderbox">
+      <div class="orderimg">
+        <%= image_tag item.product.image.url, class: 'order_img' %>
+      </div>
+      <dt>Price: </dt> 
+      $ <%= item.total_price_cents * 0.01%>
+      <dt>Product Name:</dt>  
+      <%= item.product.name%>
+      <dt>Product Description:</dt> 
+      <%= item.product.description%>
+      <dt>Product Quantity: </dt> 
+      <%= item.quantity%>
+      <dt>Product Description:</dt>  
+      <%= item.product.description%>
       <% totalOrderPrice += item.total_price_cents %>
     </div>
     <% end %>
   </div>
-
-   </div>
-
-    <h1> TOTAL PRICE: $ 
-    	<%= totalOrderPrice * 0.01 %>
-    </h1>
-
-
+  <h1> TOTAL PRICE: $ 
+    <%= totalOrderPrice * 0.01 %>
+  </h1>
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
-
 </section>
