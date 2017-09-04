@@ -1,7 +1,6 @@
 class ReviewsController < ApplicationController
     
-    before_action :require_login
- 
+
 	def create
     @product = Product.find(params[:product_id])
 
@@ -23,16 +22,6 @@ class ReviewsController < ApplicationController
     	:rating,
     )
   end
-
-    private
- 
-    def require_login
-        unless @current_user
-            flash[:error] = "You must be logged in to access this section"
-            redirect_to '/signup' 
-        end
-    end
-
 
 
 end
