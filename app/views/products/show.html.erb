@@ -1,5 +1,4 @@
 <section class="products-show">
-
   <header class="page-header">
     <h1>
     <%= link_to @product.category.name, @product.category %> &raquo; <%= @product.name %></h1>
@@ -30,7 +29,7 @@
      <%= render 'reviews/form' %>
     </div>
     <% end %>
-    <% @product.reviews.each do |review| %>
+    <% @reviews.each do |review| %>
       <div class="reviewbox">
         <h4> Customer Review </h4>
         <dl class="reviewtext">
@@ -47,8 +46,12 @@
           <dt>Description:</dt>
           <dd><%= review.description %></dd>
         </dl>
+        <% if current_user %>
+        <% if review.user_id == current_user.id %>
+          <td class="deleteButton"><%= button_to 'Delete', product_review_path(product_id: @product, id: review.id), method: :delete %></td>
+        <% end %>
+        <% end %>
       </div>
-    </div>
-      <% end %>
+    <% end %>
   </article>
 </section>
