@@ -11,18 +11,23 @@
   <div> 
     <% totalOrderPrice = 0 %>
     <% @order.line_items.each do |item| %>
-	    <dt>Total Price </dt> 
-	    <%= item.total_price_cents%>
-	    <dt>Product Name</dt>  
+    <div class="orderbox">
+          <div class="orderimg">
+      <%= image_tag item.product.image.url, class: 'order_img' %>
+      </div>
+
+	    <dt>Price: </dt> 
+	    $ <%= item.total_price_cents * 0.01%>
+	    <dt>Product Name:</dt>  
 	    <%= item.product.name%>
-	    <dt>Product Description</dt> 
+	    <dt>Product Description:</dt> 
 	    <%= item.product.description%>
-	    <dt>Product Quantity </dt> 
+	    <dt>Product Quantity: </dt> 
 	    <%= item.quantity%>
-	    <dt>Product Description</dt>  
+	    <dt>Product Description:</dt>  
 	    <%= item.product.description%>
-	    <%= image_tag item.product.image.url, class: 'order_img' %>
-	    <% totalOrderPrice += item.total_price_cents %>
+      <% totalOrderPrice += item.total_price_cents %>
+    </div>
     <% end %>
   </div>
 

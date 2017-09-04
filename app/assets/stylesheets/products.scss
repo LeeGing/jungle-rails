@@ -86,7 +86,7 @@ main section.products-show {
 }
 
 .dl-horizontal {
-  border-style: solid;
+  border-style: dotted;
   margin-top: 20px;
   border-color: #337ab7;
 }
@@ -154,4 +154,21 @@ textarea {
 
 .submitbutton {
   padding-bottom: 50px;
+}
+
+.orderbox {
+  border-style:solid;
+  padding: 30px;
+  margin: 10px;
+  height: 500px;
+
+}
+
+.order_img {
+height: 150px;
+    width: auto ;
+    margin: 50px;
+    display: block;
+    margin: 0 auto;
+
 }
