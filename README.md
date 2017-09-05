@@ -11,14 +11,21 @@ Jungle is project of Lighthouse Labs. It is a web application which allow users 
 
 ## Dependencies
 
-BCrypt
-Faker
-Money-Rails
-Puma
-PostgresSQL 9.x
-Stripe
-Rails 4.2
-RMagick
+-BCrypt
+
+-Faker
+
+-Money-Rails
+
+-Puma
+
+-PostgresSQL 9.x
+
+-Stripe
+
+-Rails 4.2
+
+-RMagick
 
 
 ## Getting Started
