@@ -6,7 +6,7 @@ Jungle is project of Lighthouse Labs. It is a web application which allow users 
 
 ["Screenshot of Home Page"]<img src="http://i.imgur.com/1CE3qNd.jpg" alt="Home page" style="max-width:100%;"></a> 
 ["Screenshot of Product"] <img src="http://i.imgur.com/lPkd07c.png" alt="Home page" style="max-width:100%;"></a>
-["Screenshot of Reviews"] <img src="http://i.imgur.com/ESdpGft.png" alt="Home page" style="max-width:100%;"></a>
+["Screenshot of Reviews"] <img src="http://i.imgur.com/7OVjNLw.png" alt="Home page" style="max-width:100%;"></a>
 
 
 ##Dependencies
