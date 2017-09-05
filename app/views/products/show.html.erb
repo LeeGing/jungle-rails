@@ -46,12 +46,9 @@
           <dt>Description:</dt>
           <dd><%= review.description %></dd>
         </dl>
-        <% if current_user %>
-        <% if review.user_id == current_user.id %>
-          <td class="deleteButton"><%= button_to 'Delete', product_review_path(product_id: @product, id: review.id), method: :delete %></td>
-        <% end %>
-        <% end %>
       </div>
-    <% end %>
+      </dl>
+      </div>
   </article>
+    <% end %>
 </section>
